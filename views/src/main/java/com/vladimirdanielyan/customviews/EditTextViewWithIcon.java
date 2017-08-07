@@ -52,7 +52,7 @@ public class EditTextViewWithIcon extends RelativeLayout {
         Drawable imagePath = a.getDrawable(R.styleable.EditTextWithIcon_image);
         String hintString = a.getString(R.styleable.EditTextWithIcon_hint);
         int editTextInputType = a.getInt(R.styleable.EditTextWithIcon_textType, 0);
-        Drawable editTextViewBackground = a.getDrawable(R.styleable.EditTextWithIcon_background);
+        Drawable editTextViewBackground = a.getDrawable(R.styleable.EditTextWithIcon_viewBackgroundColor);
         int iconPosition = a.getInt(R.styleable.EditTextWithIcon_iconPosition, 0);
 
         a.recycle();
