@@ -1,4 +1,4 @@
-package com.vladimirdanielyan.customviews;
+package com.vladimirdanielyan.customviews.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import com.vladimirdanielyan.customviews.R;
 
 /**
  * Created by vlad on 8/4/17.
