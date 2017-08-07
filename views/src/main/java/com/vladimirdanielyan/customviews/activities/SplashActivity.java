@@ -3,7 +3,6 @@ package com.vladimirdanielyan.customviews.activities;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.vladimirdanielyan.customviews.R;
 import com.vladimirdanielyan.customviews.preference_manager.UserLoggedInStatusPreferenceManager;
 
 public abstract class SplashActivity extends FullScreenActivity {
@@ -11,7 +10,7 @@ public abstract class SplashActivity extends FullScreenActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        getDelegate().onPostCreate(savedInstanceState);
 
         showWelcomePage();
     }

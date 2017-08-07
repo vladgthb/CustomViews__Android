@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    buildToolsVersion "26.0.1"
     defaultConfig {
         minSdkVersion 17
         targetSdkVersion 26
@@ -27,6 +27,7 @@ dependencies {
     //noinspection GradleDynamicVersion
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.vladgthb:FirebaseSupportLibrary__Android:v0.6.1'
     testCompile 'junit:junit:4.12'
 }
 
