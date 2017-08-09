@@ -13,6 +13,7 @@ import com.vladimirdanielyan.customviews.R;
 import com.vladimirdanielyan.customviews.views.EditTextViewWithIcon;
 import com.vladimirdanielyan.firebasesupportlibrary.activities.Authentication;
 
+
 @SuppressWarnings("unused")
 public abstract class LoginActivity extends Authentication {
 
@@ -39,6 +40,7 @@ public abstract class LoginActivity extends Authentication {
         logoImageView = (ImageView) findViewById(R.id.logo_image_view);
         loginTextView = (TextView) findViewById(R.id.login_text_view);
         buttonView = (Button) findViewById(R.id.login_button_view);
+        forgotPasswordTextView = (TextView) findViewById(R.id.forgot_password_text_view);
     }
 
     public void authUser(View view) {
