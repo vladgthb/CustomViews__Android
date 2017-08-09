@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:id="@+id/button_view"
+            android:id="@+id/login_button_view"
             android:text="@string/button_default_text"
             android:onClick="authUser"/>
 

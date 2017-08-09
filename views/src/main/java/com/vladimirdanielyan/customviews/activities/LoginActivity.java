@@ -38,7 +38,7 @@ public abstract class LoginActivity extends Authentication {
         loginActivityRelativeLayout = (RelativeLayout) findViewById(R.id.login_activity_top_view);
         logoImageView = (ImageView) findViewById(R.id.logo_image_view);
         loginTextView = (TextView) findViewById(R.id.login_text_view);
-        buttonView = (Button) findViewById(R.id.button_view);
+        buttonView = (Button) findViewById(R.id.login_button_view);
     }
 
     public void authUser(View view) {
