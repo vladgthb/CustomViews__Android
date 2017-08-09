@@ -24,7 +24,7 @@ public abstract class LoginActivity extends Authentication {
 
     ImageView logoImageView;
 
-    TextView loginTextView;
+    TextView loginTextView, forgotPasswordTextView;
 
     Button buttonView;
 
@@ -50,9 +50,7 @@ public abstract class LoginActivity extends Authentication {
         }
     }
 
-    public void requestNewPassword(View view) {
-
-    }
+    public abstract void requestNewPassword(View view);
 
     public void setBackground(Drawable drawable) {
         loginActivityRelativeLayout.setBackground(drawable);
@@ -106,4 +104,7 @@ public abstract class LoginActivity extends Authentication {
         buttonView.setBackground(background);
     }
 
+    public void setForgotPasswordTextView(String text) {
+        forgotPasswordTextView.setText(text);
+    }
 }

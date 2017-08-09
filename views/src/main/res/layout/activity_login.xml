@@ -71,6 +71,7 @@
             android:layout_height="wrap_content"
             android:text="@string/text_view_default_text"
             android:textAlignment="center"
+            android:id="@+id/forgot_password_text_view"
             android:onClick="requestNewPassword"/>
 
     </LinearLayout>
