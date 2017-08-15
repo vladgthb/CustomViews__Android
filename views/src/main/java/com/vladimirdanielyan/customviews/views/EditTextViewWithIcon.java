@@ -53,6 +53,9 @@ public class EditTextViewWithIcon extends RelativeLayout {
                 R.styleable.EditTextWithIcon, 0, 0);
         Drawable imagePath = a.getDrawable(R.styleable.EditTextWithIcon_image);
         int imageBackgroundColor = a.getInt(R.styleable.EditTextWithIcon_imageBackgroundColor, R.color.transparent);
+
+        int imagePadding = a.getInt(R.styleable.EditTextWithIcon_imagePadding, 0);
+
         String hintString = a.getString(R.styleable.EditTextWithIcon_hint);
         int editTextInputType = a.getInt(R.styleable.EditTextWithIcon_textType, 0);
         Drawable editTextViewBackground = a.getDrawable(R.styleable.EditTextWithIcon_viewBackgroundColor);
@@ -63,6 +66,11 @@ public class EditTextViewWithIcon extends RelativeLayout {
 //        Setting Icon Of The Edit Text View
         if (imagePath != null) {
             setIcon(imagePath);
+        }
+
+//        Setting Icon Padding
+        if ( imagePadding != 0) {
+            setIconPadding(imagePadding);
         }
 
 //        Setting Icon Background Color
@@ -212,6 +220,16 @@ public class EditTextViewWithIcon extends RelativeLayout {
 
     public void setImageBackground(int selectedColor) {
         iconImageView.setBackgroundColor(selectedColor);
+    }
+
+
+    /**
+     * The Method Is Setting Edit Text View Padding
+     * @param paddingNumber - padding value
+     */
+
+    public void setIconPadding(int paddingNumber) {
+        editTextView.setPadding(paddingNumber, paddingNumber, paddingNumber, paddingNumber);
     }
 
 
