@@ -229,7 +229,7 @@ public class EditTextViewWithIcon extends RelativeLayout {
      */
 
     public void setIconPadding(int paddingNumber) {
-        editTextView.setPadding(paddingNumber, paddingNumber, paddingNumber, paddingNumber);
+        iconImageView.setPadding(paddingNumber, paddingNumber, paddingNumber, paddingNumber);
     }
 
 
