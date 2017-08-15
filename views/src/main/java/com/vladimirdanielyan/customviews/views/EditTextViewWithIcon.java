@@ -52,6 +52,7 @@ public class EditTextViewWithIcon extends RelativeLayout {
         TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.EditTextWithIcon, 0, 0);
         Drawable imagePath = a.getDrawable(R.styleable.EditTextWithIcon_image);
+        int imageBackgroundColor = a.getInt(R.styleable.EditTextWithIcon_imageBackgroundColor, R.color.transparent);
         String hintString = a.getString(R.styleable.EditTextWithIcon_hint);
         int editTextInputType = a.getInt(R.styleable.EditTextWithIcon_textType, 0);
         Drawable editTextViewBackground = a.getDrawable(R.styleable.EditTextWithIcon_viewBackgroundColor);
@@ -62,6 +63,11 @@ public class EditTextViewWithIcon extends RelativeLayout {
 //        Setting Icon Of The Edit Text View
         if (imagePath != null) {
             setIcon(imagePath);
+        }
+
+//        Setting Icon Background Color
+        if (imageBackgroundColor != 0) {
+            setImageBackground(imageBackgroundColor);
         }
 
 //        Setting Edit View Hint Text
@@ -197,6 +203,15 @@ public class EditTextViewWithIcon extends RelativeLayout {
         params.setMarginEnd(16);
         params.addRule(RelativeLayout.ALIGN_PARENT_END);
         iconImageView.setLayoutParams(params);
+    }
+
+    /**
+     * The Method is changing background color of image view area
+     * @param selectedColor - image view background color
+     */
+
+    public void setImageBackground(int selectedColor) {
+        iconImageView.setBackgroundColor(selectedColor);
     }
 
 

@@ -11,6 +11,8 @@
             <enum name="textNumber" value="3" />
         </attr>
         <attr name="viewBackgroundColor" format="integer" />
+        <attr name="imageBackgroundColor" format="integer" />
+
         <attr name="iconPosition" format="enum">
             <enum name="left" value="0" />
             <enum name="right" value="1" />
