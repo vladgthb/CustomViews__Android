@@ -21,19 +21,19 @@
     </declare-styleable>
 
     <declare-styleable name="ChatView">
-        <attr name="image" format="integer" />
-        <attr name="hint" format="string" />
-        <attr name="textType" format="enum">
+        <attr name="chatViewImage" format="integer" />
+        <attr name="chatViewHint" format="string" />
+        <attr name="chatViewTextType" format="enum">
             <enum name="text" value="0" />
             <enum name="textPassword" value="1" />
             <enum name="textEmailAddress" value="2" />
             <enum name="textNumber" value="3" />
         </attr>
-        <attr name="viewBackgroundColor" format="integer" />
-        <attr name="imageBackgroundColor" format="integer" />
-        <attr name="imagePadding" format="dimension" />
+        <attr name="chatViewBackgroundColor" format="integer" />
+        <attr name="chatViewImageBackgroundColor" format="integer" />
+        <attr name="chatViewImagePadding" format="dimension" />
 
-        <attr name="iconPosition" format="enum">
+        <attr name="chatIconPosition" format="enum">
             <enum name="left" value="0" />
             <enum name="right" value="1" />
         </attr>

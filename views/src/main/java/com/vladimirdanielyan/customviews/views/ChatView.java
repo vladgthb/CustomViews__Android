@@ -44,15 +44,15 @@ public class ChatView extends RelativeLayout {
 //        Getting All Attributes
         TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.ChatView, 0, 0);
-        Drawable imagePath = a.getDrawable(R.styleable.EditTextWithIcon_image);
-        int imageBackgroundColor = a.getInt(R.styleable.EditTextWithIcon_imageBackgroundColor, R.color.transparent);
+        Drawable imagePath = a.getDrawable(R.styleable.ChatView_chatViewImage);
+        int imageBackgroundColor = a.getInt(R.styleable.ChatView_chatViewImageBackgroundColor, R.color.transparent);
 
-        int imagePadding = a.getDimensionPixelOffset(R.styleable.EditTextWithIcon_imagePadding, 0);
+        int imagePadding = a.getDimensionPixelOffset(R.styleable.ChatView_chatViewImagePadding, 0);
 
-        String hintString = a.getString(R.styleable.EditTextWithIcon_hint);
-        int editTextInputType = a.getInt(R.styleable.EditTextWithIcon_textType, 0);
-        Drawable editTextViewBackground = a.getDrawable(R.styleable.EditTextWithIcon_viewBackgroundColor);
-        int iconPosition = a.getInt(R.styleable.EditTextWithIcon_iconPosition, 0);
+        String hintString = a.getString(R.styleable.ChatView_chatViewHint);
+        int editTextInputType = a.getInt(R.styleable.ChatView_chatViewTextType, 0);
+        Drawable editTextViewBackground = a.getDrawable(R.styleable.ChatView_chatViewBackgroundColor);
+        int iconPosition = a.getInt(R.styleable.ChatView_chatIconPosition, 0);
 
         a.recycle();
 
