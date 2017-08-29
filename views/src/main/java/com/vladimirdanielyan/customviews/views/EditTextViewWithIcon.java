@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.text.InputType;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -52,6 +53,8 @@ public class EditTextViewWithIcon extends RelativeLayout {
         TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.EditTextWithIcon, 0, 0);
         Drawable imagePath = a.getDrawable(R.styleable.EditTextWithIcon_image);
+        int imageWidth = a.getInt(R.styleable.EditTextWithIcon_imageWidth, 0);
+        int imageHeight = a.getInt(R.styleable.EditTextWithIcon_imageHeight, 0);
         int imageBackgroundColor = a.getInt(R.styleable.EditTextWithIcon_imageBackgroundColor, R.color.transparent);
 
         int imagePadding = a.getDimensionPixelOffset(R.styleable.EditTextWithIcon_imagePadding, 0);
@@ -66,6 +69,15 @@ public class EditTextViewWithIcon extends RelativeLayout {
 //        Setting Icon Of The Edit Text View
         if (imagePath != null) {
             setIcon(imagePath);
+
+            if (imageWidth > 0) {
+                setIconWidth(imageWidth);
+            }
+
+            if (imageHeight > 0) {
+                setIconHeight(imageHeight);
+            }
+
         }
 
 //        Setting Icon Padding
@@ -131,8 +143,26 @@ public class EditTextViewWithIcon extends RelativeLayout {
 
     public void setIcon(Drawable drawable) {
         iconImageView.setImageDrawable(drawable);
-        //noinspection SuspiciousNameCombination
-        iconImageView.getLayoutParams().width = iconImageView.getLayoutParams().height;
+    }
+
+
+    /**
+     * The Method Is Setting Icon Width
+     * @param widthValue - The Icon Width Value
+     */
+
+    public void setIconWidth(int widthValue) {
+        iconImageView.getLayoutParams().width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, widthValue, getResources().getDisplayMetrics());
+    }
+
+
+    /**
+     * The Method Is Setting Icon Height
+     * @param heightValue - The Height Value
+     */
+
+    public void setIconHeight(int heightValue) {
+        iconImageView.getLayoutParams().height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, heightValue, getResources().getDisplayMetrics());
     }
 
 

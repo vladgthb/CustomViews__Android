@@ -3,6 +3,8 @@
 
     <declare-styleable name="EditTextWithIcon">
         <attr name="image" format="integer" />
+        <attr name="imageHeight" format="integer" />
+        <attr name="imageWidth" format="integer" />
         <attr name="hint" format="string" />
         <attr name="textType" format="enum">
             <enum name="text" value="0" />
