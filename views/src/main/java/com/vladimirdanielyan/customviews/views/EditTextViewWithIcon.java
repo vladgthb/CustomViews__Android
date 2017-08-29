@@ -131,6 +131,8 @@ public class EditTextViewWithIcon extends RelativeLayout {
 
     public void setIcon(Drawable drawable) {
         iconImageView.setImageDrawable(drawable);
+        //noinspection SuspiciousNameCombination
+        iconImageView.getLayoutParams().width = iconImageView.getLayoutParams().height;
     }
 
 
