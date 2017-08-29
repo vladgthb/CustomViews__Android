@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.text.InputType;
+import android.text.method.PasswordTransformationMethod;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -198,7 +199,11 @@ public class EditTextViewWithIcon extends RelativeLayout {
      */
 
     public void setTextType(int textType) {
-        editTextView.setInputType(textType);
+        if (textType != InputType.TYPE_TEXT_VARIATION_PASSWORD) {
+            editTextView.setInputType(textType);
+        } else {
+            editTextView.setTransformationMethod(PasswordTransformationMethod.getInstance());
+        }
     }
 
 
