@@ -278,4 +278,14 @@ public class EditTextViewWithIcon extends RelativeLayout {
     public String getText() {
         return editTextView.getText().toString();
     }
+
+
+    /**
+     * The Method Is Displaying error
+     * @param text - the error message
+     */
+
+    public void setError(CharSequence text) {
+        editTextView.setError(text);
+    }
 }
